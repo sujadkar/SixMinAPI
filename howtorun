@@ -1,0 +1,18 @@
+create api 
+=>dotnet new webapi -minimal -n SixMinAPI
+open in vs code
+=> code -r SixMinAPI
+
+install following pakcage 
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+dotnet user-secrets init
+dotnet user-secrets set "UserId" "sa"
+dotnet user-secrets set "password" "sujay"
+
+migrations:
+dotnet ef migrations add intialmigration
+dotnet ef database update
